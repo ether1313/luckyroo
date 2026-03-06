@@ -2,7 +2,7 @@
 export const SITE_URL = 'https://luckyroo.win';
 
 const DEFAULT_DESCRIPTION =
-  "Lucky Roo – Australia's trusted source for online casino reviews, pokies guides & exclusive bonuses. For Aussie players. 18+.";
+  "Lucky Roo – Australia's trusted source for online casino reviews, pokies guides & exclusive bonuses. Licensed in Australia. Responsible Gambling 18+. SSL Secure. For Aussie players.";
 
 /**
  * Set page title and optional meta description (for SPA; good for crawlers that run JS).

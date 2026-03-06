@@ -1,7 +1,8 @@
 # Dependencies
 node_modules/
 
-# Build output
+# Build output（你專案用 out，部署平台也填 out）
+out/
 dist/
 dist-ssr/
 *.local
