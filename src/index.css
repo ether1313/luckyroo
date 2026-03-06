@@ -1,0 +1,29 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: transparent;
+  }
+}
+
+@layer utilities {
+  .gradient-blue {
+    background: linear-gradient(135deg, #1a6fff 0%, #0ea5e9 100%);
+  }
+  .gradient-blue-text {
+    background: linear-gradient(135deg, #1a6fff 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(26, 111, 255, 0.35);
+  }
+  .card-bg {
+    background: #1A1A1A;
+    border: 1px solid rgba(26, 111, 255, 0.12);
+  }
+}
