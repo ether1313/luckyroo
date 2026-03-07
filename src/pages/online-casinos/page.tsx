@@ -150,7 +150,7 @@ export default function OnlineCasinosPage() {
                       READ REVIEW
                     </Link>
                     <a
-                      href={`https://${casino.slug}.com`}
+                      href={casino.playNowUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap text-center shadow-[0_0_14px_rgba(26,111,255,0.35)]"

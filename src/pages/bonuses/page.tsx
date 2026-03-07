@@ -103,9 +103,14 @@ function BonusCard({ casino, index, expandedKey, onToggle }: {
         </div>
 
         {/* View Bonus Button */}
-        <button className="w-full bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap shadow-[0_0_14px_rgba(26,111,255,0.35)] tracking-wide">
+        <a
+          href={review?.playNowUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap shadow-[0_0_14px_rgba(26,111,255,0.35)] tracking-wide text-center no-underline"
+        >
           VIEW BONUS &rsaquo;
-        </button>
+        </a>
       </div>
     </div>
   );

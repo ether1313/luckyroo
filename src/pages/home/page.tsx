@@ -140,9 +140,14 @@ export default function HomePage() {
                   {getCasinoBySlug(item.logoKey)?.bonuses?.[0]?.title ?? 'Casino Bonus'}
                 </h4>
               </div>
-              <button className="bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white px-4 py-2.5 md:py-3 rounded-lg text-sm font-semibold mb-2 md:mb-3 whitespace-nowrap hover:opacity-90 transition-opacity cursor-pointer shadow-[0_0_12px_rgba(26,111,255,0.35)]">
+              <a
+                href={getCasinoBySlug(item.logoKey)?.playNowUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white px-4 py-2.5 md:py-3 rounded-lg text-sm font-semibold mb-2 md:mb-3 whitespace-nowrap hover:opacity-90 transition-opacity cursor-pointer shadow-[0_0_12px_rgba(26,111,255,0.35)]"
+              >
                 VIEW BONUS <i className="ri-arrow-right-s-line"></i>
-              </button>
+              </a>
               <Link
                 to={`/casino/${item.logoKey}-casino`}
                 className="text-[#0ea5e9] text-sm underline hover:text-white transition-colors cursor-pointer"

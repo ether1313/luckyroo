@@ -149,6 +149,23 @@ const WITHDRAWAL_LIMIT_BY_SLUG: Record<string, string> = {
   ace96au: 'No Limit (min. A$28)',
 };
 
+/** Affiliate URLs for Read review / Play now / View bonus buttons (same destination per brand). */
+const AFFILIATE_URL_BY_SLUG: Record<string, string> = {
+  gucci9: 'https://gucci9office.net/RFLUCKYROOGU',
+  pkm9: 'https://ppkkmmoon13.com/RFPOLUCKYROO',
+  me99: 'https://me99aus.net/RFLUCKYROOME',
+  mrbean9: 'https://mrbean9au.com/RFLUCKYROOMR',
+  ipay9: 'https://ipay9.co/RFLUCKYROOO',
+  ace96au: 'https://ace96au.com/RFLUCKYROOACE',
+  rolex9: 'https://rolex9au.com/RFRLUCKYROO',
+  kingbet9: 'https://king9aus.net/RFK9LUCKYROO',
+  bigpay77: 'https://bigpay77aus.com/RFLLUCKYROO',
+  bybid9: 'https://bybid9.net/RFLUCKYROO',
+  micky9: 'https://micky13.asia/RFLUCKYROOMIC',
+  queen13: 'https://queen13au.com/RFLUCKYROOQUEEN',
+  winnie777: 'https://winnie777.org/RFLUCKYROOWIINE',
+};
+
 /** Per-casino overview (review) sections — same structure, different wording per brand. */
 const OVERVIEW_BY_SLUG: Record<string, Array<{ heading: string; content: string }>> = {
   ipay9: [
@@ -350,7 +367,7 @@ function buildCasino(slug: string, name: string, rating: number, summary: string
     logo: getBonusLogoUrl(slug),
     banner: SHARED.banner,
     rating,
-    playNowUrl: `https://${slug}.com`,
+    playNowUrl: AFFILIATE_URL_BY_SLUG[slug] ?? `https://${slug}.com`,
     summary,
     pros,
     cons,
