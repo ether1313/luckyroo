@@ -144,7 +144,7 @@ export default function HomePage() {
                 href={getCasinoBySlug(item.logoKey)?.playNowUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white px-4 py-2.5 md:py-3 rounded-lg text-sm font-semibold mb-2 md:mb-3 whitespace-nowrap hover:opacity-90 transition-opacity cursor-pointer shadow-[0_0_12px_rgba(26,111,255,0.35)]"
+                className="block w-full text-center bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white px-4 py-2.5 md:py-3 rounded-lg text-sm font-semibold mb-2 md:mb-3 whitespace-nowrap hover:opacity-90 transition-opacity cursor-pointer shadow-[0_0_12px_rgba(26,111,255,0.35)]"
               >
                 VIEW BONUS <i className="ri-arrow-right-s-line"></i>
               </a>
