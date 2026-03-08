@@ -36,7 +36,7 @@ function buildSitemapXml(urls) {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urlEntries.join('\n')}
 </urlset>
-`;
+`.trimEnd() + '\n';
 }
 
 function main() {
