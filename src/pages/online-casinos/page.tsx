@@ -43,6 +43,7 @@ export default function OnlineCasinosPage() {
   const [activeTab, setActiveTab] = useState<Tab>('ALL');
   const [currentPage, setCurrentPage] = useState(1);
   const listTopRef = useRef<HTMLDivElement>(null);
+  const pageBgUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/page-bg-dice-light.png`;
 
   useEffect(() => {
     setPageMeta(
@@ -75,7 +76,9 @@ export default function OnlineCasinosPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative overflow-hidden">
+      <div className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${pageBgUrl})` }} aria-hidden />
+      <div className="relative z-10">
       {/* Page Header */}
       <div className="relative py-14 text-center overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -83,8 +86,8 @@ export default function OnlineCasinosPage() {
         </div>
         <div className="relative z-10">
           <p className="text-[#0ea5e9] text-sm font-semibold tracking-widest mb-3 uppercase">Browse & Compare</p>
-          <h1 className="text-white text-3xl md:text-4xl font-bold">Top-Rated Online</h1>
-          <h2 className="text-3xl md:text-4xl font-bold mt-1 bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] bg-clip-text text-transparent">
+          <h1 className="text-[#081a43] text-3xl md:text-4xl font-extrabold drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">Top-Rated Online</h1>
+          <h2 className="text-3xl md:text-4xl font-extrabold mt-1 text-[#0f3c96] drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">
             Ewallet Casinos in 2026
           </h2>
         </div>
@@ -99,8 +102,8 @@ export default function OnlineCasinosPage() {
               onClick={() => handleTabChange(tab)}
               className={`px-8 py-4 text-sm font-semibold tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
                 activeTab === tab
-                  ? 'text-white border-b-2 border-[#1a6fff]'
-                  : 'text-gray-500 hover:text-gray-300'
+                  ? 'text-[#0f3c96] border-b-2 border-[#1a6fff]'
+                  : 'text-gray-500 hover:text-[#0f3c96]'
               }`}
             >
               {tab}
@@ -120,12 +123,12 @@ export default function OnlineCasinosPage() {
             return (
               <div
                 key={casino.id}
-                className="bg-[#1A1A1A] border border-[#1a6fff]/15 rounded-xl overflow-hidden shadow-lg hover:border-[#1a6fff]/40 hover:shadow-[0_0_24px_rgba(26,111,255,0.15)] transition-all duration-300"
+                className="rounded-xl overflow-hidden border border-[#4aa3ff]/45 bg-[linear-gradient(155deg,rgba(16,45,109,0.97)_0%,rgba(12,86,184,0.86)_48%,rgba(15,165,233,0.74)_100%)] shadow-[0_16px_35px_rgba(10,50,140,0.38)] hover:shadow-[0_20px_40px_rgba(15,112,255,0.45)] transition-all duration-300"
               >
                 {/* Casino Image */}
                 <div className="relative">
                   <img src={getLogoUrlByName(casino.name)} alt={casino.name} className="w-full h-40 object-cover" />
-                  <span className="absolute top-3 left-3 bg-gradient-to-br from-[#3b82f6] via-[#2563eb] to-[#1d4ed8] text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                  <span className="absolute top-3 left-3 bg-gradient-to-br from-[#7ad7ff] via-[#38b6ff] to-[#1f8fff] text-[#062b66] w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold shadow-[0_0_10px_rgba(59,130,246,0.55)]">
                     {globalIndex}
                   </span>
                 </div>
@@ -145,7 +148,7 @@ export default function OnlineCasinosPage() {
                   <div className="flex gap-2 mb-4">
                     <Link
                       to={`/casino/${casino.slug}-casino`}
-                      className="flex-1 bg-transparent border border-gray-500 text-white py-2.5 rounded-lg text-sm font-semibold hover:border-[#1a6fff]/60 hover:text-[#4a9eff] transition-all cursor-pointer whitespace-nowrap text-center"
+                      className="flex-1 bg-gradient-to-r from-[#ff8a00] to-[#ff3d6e] text-white py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap text-center shadow-[0_10px_24px_rgba(255,75,80,0.45)]"
                     >
                       READ REVIEW
                     </Link>
@@ -153,7 +156,7 @@ export default function OnlineCasinosPage() {
                       href={casino.playNowUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap text-center shadow-[0_0_14px_rgba(26,111,255,0.35)]"
+                      className="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#06b6d4] text-white py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap text-center shadow-[0_10px_24px_rgba(6,182,212,0.4)]"
                     >
                       PLAY NOW &rsaquo;
                     </a>
@@ -167,7 +170,7 @@ export default function OnlineCasinosPage() {
                         {pros.map((pro) => (
                           <li key={pro} className="flex items-center gap-2 text-gray-300 text-xs">
                             <i className="ri-thumb-up-line text-[#4a9eff] flex-shrink-0 text-sm"></i>
-                            <span>{pro}</span>
+                            <span className="text-[#e8f4ff]">{pro}</span>
                           </li>
                         ))}
                       </ul>
@@ -178,7 +181,7 @@ export default function OnlineCasinosPage() {
                         {bonusTitles.map((title) => (
                           <li key={title} className="flex items-center gap-2 text-gray-300 text-xs">
                             <i className="ri-gift-line text-[#4a9eff] flex-shrink-0 text-sm"></i>
-                            <span>{title}</span>
+                            <span className="text-[#e8f4ff]">{title}</span>
                           </li>
                         ))}
                       </ul>
@@ -188,14 +191,14 @@ export default function OnlineCasinosPage() {
                       <div className="flex flex-wrap gap-3">
                         {casino.games.map((game) => (
                           <div key={game} className="flex flex-col items-center gap-1 min-w-[4rem]">
-                            <div className="w-9 h-9 flex items-center justify-center bg-[#1A1A1A] border border-gray-600 rounded-lg">
+                            <div className="w-9 h-9 flex items-center justify-center bg-[#0f3b8f]/50 border border-[#9fd4ff]/40 rounded-lg">
                               <img
                                 src={GAME_ICONS[game] ?? '/game-icons/slots.svg'}
                                 alt=""
                                 className="w-5 h-5 object-contain invert opacity-80"
                               />
                             </div>
-                            <span className="text-gray-400 text-[10px] text-center leading-tight">{game}</span>
+                            <span className="text-[#d6ebff] text-[10px] text-center leading-tight">{game}</span>
                           </div>
                         ))}
                       </div>
@@ -209,7 +212,7 @@ export default function OnlineCasinosPage() {
 
         {/* Pagination */}
         <div className="mt-6 md:mt-8 flex flex-col items-center gap-3 md:gap-4">
-          <p className="text-gray-500 text-sm">
+          <p className="text-[#475569] text-sm">
             Showing {(currentPage - 1) * ITEMS_PER_PAGE + 1} to{' '}
             {Math.min(currentPage * ITEMS_PER_PAGE, filteredCasinos.length)} of{' '}
             {filteredCasinos.length} online casinos
@@ -222,7 +225,7 @@ export default function OnlineCasinosPage() {
                 className={`w-9 h-9 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
                   currentPage === page
                     ? 'bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white shadow-[0_0_12px_rgba(26,111,255,0.4)]'
-                    : 'bg-[#1A1A1A] border border-[#1a6fff]/15 text-gray-400 hover:text-white hover:border-[#1a6fff]/40'
+                    : 'bg-white border border-[#b9cff9] text-[#475569] hover:text-[#0f3c96] hover:border-[#1a6fff]/50'
                 }`}
               >
                 {page}
@@ -233,6 +236,7 @@ export default function OnlineCasinosPage() {
       </div>
 
       <Footer />
+      </div>
     </div>
   );
 }

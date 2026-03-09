@@ -46,11 +46,11 @@ function BonusCard({ casino, index, expandedKey, onToggle }: {
     : casino.bonuses.map((b) => ({ title: b.title, fromReview: false as const, desc: b.desc }));
 
   return (
-    <div className="bg-[#1A1A1A] border border-[#1a6fff]/15 rounded-xl overflow-hidden shadow-lg hover:border-[#1a6fff]/40 hover:shadow-[0_0_24px_rgba(26,111,255,0.15)] transition-all duration-300">
+    <div className="rounded-xl overflow-hidden border border-[#4aa3ff]/45 bg-[linear-gradient(155deg,rgba(16,45,109,0.97)_0%,rgba(12,86,184,0.86)_48%,rgba(15,165,233,0.74)_100%)] shadow-[0_16px_35px_rgba(10,50,140,0.38)] hover:shadow-[0_20px_40px_rgba(15,112,255,0.45)] transition-all duration-300">
       {/* Casino Image */}
       <div className="relative">
         <img src={getLogoUrl(casino.slug)} alt={casino.name} className="w-full h-40 object-cover rounded-lg border-2 border-[#0ea5e9]" />
-        <span className="absolute top-3 left-3 bg-gradient-to-br from-[#3b82f6] via-[#2563eb] to-[#1d4ed8] text-white w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+        <span className="absolute top-3 left-3 bg-gradient-to-br from-[#7ad7ff] via-[#38b6ff] to-[#1f8fff] text-[#062b66] w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold shadow-[0_0_10px_rgba(59,130,246,0.55)]">
           {index}
         </span>
       </div>
@@ -62,10 +62,10 @@ function BonusCard({ casino, index, expandedKey, onToggle }: {
           <div className="flex items-center gap-1">
             <i className="ri-star-fill text-[#0ea5e9] text-sm"></i>
             <span className="text-white font-bold text-sm">{casino.rating.toFixed(2)}</span>
-            <span className="text-gray-500 text-sm">/10</span>
+            <span className="text-[#d8ebff] text-sm">/10</span>
             <Link
               to={`/casino/${casino.slug}-casino`}
-              className="ml-2 text-[#0ea5e9] text-xs font-semibold hover:text-white transition-colors cursor-pointer whitespace-nowrap uppercase tracking-wide"
+              className="ml-2 text-[#dff2ff] text-xs font-bold hover:text-white transition-colors cursor-pointer whitespace-nowrap uppercase tracking-wide"
             >
               Read Review
             </Link>
@@ -78,18 +78,18 @@ function BonusCard({ casino, index, expandedKey, onToggle }: {
             const rowKey = `${casino.id}-${i}`;
             const isExpanded = expandedKey === rowKey;
             return (
-            <div key={`${bonus.title}-${i}`} className="border-b border-[#1a6fff]/10 last:border-0">
+            <div key={`${bonus.title}-${i}`} className="border-b border-[#9fd4ff]/30 last:border-0">
               <button
                 onClick={() => onToggle(isExpanded ? '' : rowKey)}
                 className="w-full flex items-center justify-between py-2.5 text-left cursor-pointer group"
               >
-                <span className="text-white text-sm font-semibold group-hover:text-[#0ea5e9] transition-colors">
+                <span className="text-white text-sm font-semibold group-hover:text-[#d7eeff] transition-colors">
                   {bonus.title}
                 </span>
-                <i className={`ri-arrow-down-s-line text-[#0ea5e9] text-lg transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}></i>
+                <i className={`ri-arrow-down-s-line text-[#d7eeff] text-lg transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}></i>
               </button>
               {isExpanded && (
-                <div className="text-gray-400 text-xs pb-2.5 pl-1">
+                <div className="text-[#e7f4ff] text-xs pb-2.5 pl-1">
                   {bonus.fromReview ? (
                     <p>{bonus.bonusRequirement}</p>
                   ) : (
@@ -107,7 +107,7 @@ function BonusCard({ casino, index, expandedKey, onToggle }: {
           href={review?.playNowUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap shadow-[0_0_14px_rgba(26,111,255,0.35)] tracking-wide text-center no-underline"
+          className="block w-full bg-gradient-to-r from-[#ff8a00] to-[#ff3d6e] text-white py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap shadow-[0_10px_24px_rgba(255,75,80,0.45)] tracking-wide text-center no-underline"
         >
           VIEW BONUS &rsaquo;
         </a>
@@ -121,6 +121,7 @@ export default function BonusesPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const listTopRef = useRef<HTMLDivElement>(null);
+  const pageBgUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/page-bg-dice-light.png`;
 
   useEffect(() => {
     setPageMeta(
@@ -158,15 +159,17 @@ export default function BonusesPage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative overflow-hidden">
+      <div className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${pageBgUrl})` }} aria-hidden />
+      <div className="relative z-10">
       {/* Page Header */}
       <div className="relative py-10 md:py-12 text-center overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[250px] bg-gradient-to-b from-[#1a6fff]/20 to-transparent rounded-full blur-3xl"></div>
         </div>
         <div className="relative z-10">
-          <h1 className="text-white text-3xl md:text-4xl font-bold">Best Casino Bonuses</h1>
-          <h2 className="text-3xl md:text-4xl font-bold mt-1 bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] bg-clip-text text-transparent">
+          <h1 className="text-[#081a43] text-3xl md:text-4xl font-extrabold drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">Best Casino Bonuses</h1>
+          <h2 className="text-3xl md:text-4xl font-extrabold mt-1 text-[#0f3c96] drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">
             to Claim in 2026
           </h2>
         </div>
@@ -181,8 +184,8 @@ export default function BonusesPage() {
               onClick={() => handleTabChange(tab)}
               className={`px-8 py-4 text-sm font-semibold tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
                 activeTab === tab
-                  ? 'text-white border-b-2 border-[#1a6fff]'
-                  : 'text-gray-500 hover:text-gray-300'
+                  ? 'text-[#0f3c96] border-b-2 border-[#1a6fff]'
+                  : 'text-gray-500 hover:text-[#0f3c96]'
               }`}
             >
               {tab}
@@ -210,7 +213,7 @@ export default function BonusesPage() {
 
         {/* Pagination */}
         <div className="mt-6 md:mt-8 flex flex-col items-center gap-3 md:gap-4">
-          <p className="text-gray-500 text-sm">
+          <p className="text-[#475569] text-sm">
             Showing {(currentPage - 1) * ITEMS_PER_PAGE + 1} to{' '}
             {Math.min(currentPage * ITEMS_PER_PAGE, filtered.length)} of{' '}
             {filtered.length} online casinos
@@ -219,7 +222,7 @@ export default function BonusesPage() {
             <button
               onClick={() => goToPage(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
-              className="w-9 h-9 rounded-lg text-sm font-semibold bg-[#1A1A1A] border border-[#1a6fff]/15 text-gray-400 hover:text-white hover:border-[#1a6fff]/40 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
+              className="w-9 h-9 rounded-lg text-sm font-semibold bg-white border border-[#b9cff9] text-[#475569] hover:text-[#0f3c96] hover:border-[#1a6fff]/50 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
             >
               <i className="ri-arrow-left-s-line"></i>
             </button>
@@ -230,7 +233,7 @@ export default function BonusesPage() {
                 className={`w-9 h-9 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
                   currentPage === page
                     ? 'bg-gradient-to-r from-[#1a6fff] to-[#0ea5e9] text-white shadow-[0_0_12px_rgba(26,111,255,0.4)]'
-                    : 'bg-[#1A1A1A] border border-[#1a6fff]/15 text-gray-400 hover:text-white hover:border-[#1a6fff]/40'
+                    : 'bg-white border border-[#b9cff9] text-[#475569] hover:text-[#0f3c96] hover:border-[#1a6fff]/50'
                 }`}
               >
                 {page}
@@ -239,7 +242,7 @@ export default function BonusesPage() {
             <button
               onClick={() => goToPage(Math.min(totalPages, currentPage + 1))}
               disabled={currentPage === totalPages}
-              className="w-9 h-9 rounded-lg text-sm font-semibold bg-[#1A1A1A] border border-[#1a6fff]/15 text-gray-400 hover:text-white hover:border-[#1a6fff]/40 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
+              className="w-9 h-9 rounded-lg text-sm font-semibold bg-white border border-[#b9cff9] text-[#475569] hover:text-[#0f3c96] hover:border-[#1a6fff]/50 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
             >
               <i className="ri-arrow-right-s-line"></i>
             </button>
@@ -248,6 +251,7 @@ export default function BonusesPage() {
       </div>
 
       <Footer />
+      </div>
     </div>
   );
 }
