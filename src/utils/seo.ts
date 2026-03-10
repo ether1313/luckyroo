@@ -1,5 +1,5 @@
 /** Production site URL for canonical, og:url, etc. */
-export const SITE_URL = 'https://luckyroo.win';
+export const SITE_URL = 'https://www.luckyroo.win';
 
 const DEFAULT_DESCRIPTION =
   "Lucky Roo – Australia's trusted source for online casino reviews, pokies guides & exclusive bonuses. Licensed in Australia. Responsible Gambling 18+. SSL Secure. For Aussie players.";

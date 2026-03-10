@@ -1,7 +1,7 @@
 # Lucky Roo - Australia Online Casino & Pokies Reviews
-# https://luckyroo.win
+# https://www.luckyroo.win
 
 User-agent: *
 Allow: /
 
-Sitemap: https://luckyroo.win/sitemap.xml
+Sitemap: https://www.luckyroo.win/sitemap.xml

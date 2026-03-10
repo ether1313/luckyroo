@@ -3,7 +3,7 @@
  * Rewrite /sitemap.xml -> /api/sitemap-xml in vercel.json so this handles the request.
  * Keep SLUGS in sync with src/pages/casino-review/casinoData.ts LIST entries.
  */
-const SITE_URL = 'https://luckyroo.win';
+const SITE_URL = 'https://www.luckyroo.win';
 const SLUGS = [
   'ipay9', 'kingbet9', 'bigpay77', 'me99', 'rolex9', 'gucci9', 'pkm9',
   'mrbean9', 'micky9', 'winnie777', 'bybid9', 'queen13', 'ace96au',

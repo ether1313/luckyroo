@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
-const SITE_URL = 'https://luckyroo.win';
+const SITE_URL = 'https://www.luckyroo.win';
 
 const outDir = process.argv[2] || resolve(ROOT, 'out');
 
@@ -61,7 +61,7 @@ function main() {
   console.log('Written:', resolve(outDir, 'sitemap.xml'));
 
   const robots = `# Lucky Roo - Australia Online Casino & Pokies Reviews
-# https://luckyroo.win
+# https://www.luckyroo.win
 # Auto-generated on build.
 
 User-agent: *
