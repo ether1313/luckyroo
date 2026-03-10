@@ -46,7 +46,7 @@ function BonusCard({ casino, index, expandedKey, onToggle }: {
     : casino.bonuses.map((b) => ({ title: b.title, fromReview: false as const, desc: b.desc }));
 
   return (
-    <div className="rounded-xl overflow-hidden border border-[#4aa3ff]/45 bg-[linear-gradient(155deg,rgba(16,45,109,0.97)_0%,rgba(12,86,184,0.86)_48%,rgba(15,165,233,0.74)_100%)] shadow-[0_16px_35px_rgba(10,50,140,0.38)] hover:shadow-[0_20px_40px_rgba(15,112,255,0.45)] transition-all duration-300">
+    <div className="rounded-xl overflow-hidden border border-[#4aa3ff]/45 bg-[#1457b8] shadow-[0_16px_35px_rgba(10,50,140,0.38)] hover:shadow-[0_20px_40px_rgba(15,112,255,0.45)] transition-all duration-300">
       {/* Casino Image */}
       <div className="relative">
         <img src={getLogoUrl(casino.slug)} alt={casino.name} className="w-full h-40 object-cover rounded-lg border-2 border-[#0ea5e9]" />

@@ -123,7 +123,7 @@ export default function OnlineCasinosPage() {
             return (
               <div
                 key={casino.id}
-                className="rounded-xl overflow-hidden border border-[#4aa3ff]/45 bg-[linear-gradient(155deg,rgba(16,45,109,0.97)_0%,rgba(12,86,184,0.86)_48%,rgba(15,165,233,0.74)_100%)] shadow-[0_16px_35px_rgba(10,50,140,0.38)] hover:shadow-[0_20px_40px_rgba(15,112,255,0.45)] transition-all duration-300"
+                className="rounded-xl overflow-hidden border border-[#4aa3ff]/45 bg-[#1457b8] shadow-[0_16px_35px_rgba(10,50,140,0.38)] hover:shadow-[0_20px_40px_rgba(15,112,255,0.45)] transition-all duration-300"
               >
                 {/* Casino Image */}
                 <div className="relative">
