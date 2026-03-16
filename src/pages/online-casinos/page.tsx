@@ -137,7 +137,7 @@ export default function OnlineCasinosPage() {
                 <div className="p-4 md:p-5 flex flex-col">
                   {/* Name & Rating - top row */}
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-white text-base md:text-lg font-bold">{casino.name}</h3>
+                    <h3 className="text-white text-base md:text-lg font-bold">{casino.name} Ewallet Casino</h3>
                     <div className="flex items-center gap-1">
                       <i className="ri-star-fill text-yellow-400 text-sm"></i>
                       <span className="text-white font-bold text-sm">{casino.rating.toFixed(2)}</span>
