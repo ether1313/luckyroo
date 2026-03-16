@@ -55,7 +55,7 @@ const SHARED = {
   banner: '/welcome-banner.png',
   trustBadges: ['Licensed & Regulated', 'SSL Encrypted', 'Fair Gaming', 'Responsible Gambling'],
   license: 'Curacao eGaming License',
-  trustScoreBy: 'Trust Score by Lucky Roo',
+  trustScoreBy: 'Trust Score by LuckyRoo',
   trustLabel: 'Trusted by Curacao Gaming Authority (CGA)',
   keyFacts: {
     founded: '2020',

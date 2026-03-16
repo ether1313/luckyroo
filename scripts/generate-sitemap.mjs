@@ -60,7 +60,7 @@ function main() {
   writeFileSync(resolve(outDir, 'sitemap.xml'), sitemap, 'utf-8');
   console.log('Written:', resolve(outDir, 'sitemap.xml'));
 
-  const robots = `# Lucky Roo - Australia Online Casino & Pokies Reviews
+  const robots = `# LuckyRoo - Australia Online Casino & Pokies Reviews
 # https://www.luckyroo.win
 # Auto-generated on build.
 

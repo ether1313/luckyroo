@@ -44,7 +44,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#1A1A1A] border-b border-[#1a6fff]/20 sticky top-0 z-50 shadow-[0_2px_20px_rgba(26,111,255,0.15)]">
+    <nav className="bg-[#232323] border-b border-[#1a6fff]/20 sticky top-0 z-50 shadow-[0_2px_20px_rgba(26,111,255,0.15)]">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <button
@@ -65,13 +65,13 @@ export default function Navbar() {
           </button>
 
           <div className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors text-sm">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors text-md">
               Home
             </Link>
-            <Link to="/australia-online-casinos" className="text-gray-300 hover:text-white transition-colors text-sm">
+            <Link to="/australia-online-casinos" className="text-gray-300 hover:text-white transition-colors text-md">
               Online Casinos
             </Link>
-            <Link to="/australia-casino-bonuses" className="text-gray-300 hover:text-white transition-colors text-sm">
+            <Link to="/australia-casino-bonuses" className="text-gray-300 hover:text-white transition-colors text-md">
               Bonuses
             </Link>
             <button

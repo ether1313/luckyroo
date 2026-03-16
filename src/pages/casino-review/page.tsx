@@ -44,7 +44,7 @@ export default function CasinoReview() {
   // SEO: per-casino title and description (runs when casino is loaded)
   useEffect(() => {
     if (casino) {
-      const title = `${casino.name} Casino Review Australia | Lucky Roo`;
+      const title = `${casino.name} Casino Review Australia | LuckyRoo`;
       const desc =
         casino.summary.length > 155
           ? casino.summary.slice(0, 152) + '…'

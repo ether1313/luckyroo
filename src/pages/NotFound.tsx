@@ -6,7 +6,7 @@ export default function NotFound() {
   const location = useLocation();
 
   useEffect(() => {
-    setPageMeta("Page Not Found | Lucky Roo");
+    setPageMeta("Page Not Found | LuckyRoo");
   }, []);
 
   return (

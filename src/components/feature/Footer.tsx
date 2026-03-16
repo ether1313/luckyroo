@@ -77,7 +77,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-[#1a6fff]/10 pt-4 md:pt-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
           <p className="text-gray-500 text-xs text-center md:text-left">
-            &copy; {new Date().getFullYear()} Lucky Roo. All rights reserved.
+            &copy; {new Date().getFullYear()} LuckyRoo. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs text-center">
             Responsible Gambling | 18+ Only | Play Responsibly | AU Licensed Operator | Regulated under Australian Gaming Laws

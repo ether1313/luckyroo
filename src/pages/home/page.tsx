@@ -48,8 +48,8 @@ export default function HomePage() {
 
   useEffect(() => {
     setPageMeta(
-      "Lucky Roo | Australia's Trusted Online Casino & Pokies Reviews 2025",
-      "Lucky Roo – Australia's trusted source for online casino reviews, pokies guides & exclusive bonuses. Compare licensed AU casinos, withdrawal limits & real ratings. For Aussie players. 18+."
+      "LuckyRoo | Australia's Trusted Online Casino & Pokies Reviews",
+      "LuckyRoo – Australia's trusted source for online casino reviews, pokies guides & exclusive bonuses. Compare licensed AU casinos, withdrawal limits & real ratings. For Aussie players. 18+."
     );
   }, []);
 
@@ -67,7 +67,7 @@ export default function HomePage() {
             </h1>
 
             <div className="mt-6 md:mt-10">
-              <p className="text-[#0ea5e9] text-xs md:text-sm font-semibold tracking-widest mb-1 md:mb-2 uppercase">Our Top Rated</p>
+              <p className="text-[#ff1d1d] text-xs md:text-sm font-semibold tracking-widest mb-1 md:mb-2 uppercase">Our Top Rated</p>
               <h2 className="text-2xl md:text-3xl font-extrabold text-[#081a43] drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">Online Ewallet Casinos</h2>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function HomePage() {
 
         {/* Casino Bonuses Section */}
         <div className="text-center text-[#0f172a] mb-6 md:mb-8">
-          <p className="text-[#0ea5e9] text-xs md:text-sm font-semibold tracking-widest mb-1 md:mb-2 uppercase">Our Best</p>
+          <p className="text-[#ff1d1d] text-xs md:text-sm font-semibold tracking-widest mb-1 md:mb-2 uppercase">Our Best</p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-[#081a43] drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">Ewallet Casino Bonuses</h2>
         </div>
 

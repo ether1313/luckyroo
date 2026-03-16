@@ -16,17 +16,17 @@ export default function LuckyRooLogo({ className = '', size = 'md' }: LuckyRooLo
   const s = sizes[size];
 
   return (
-    <Link to="/" className={`flex items-center gap-2.5 no-underline ${className}`}>
+    <a href="/" className={`flex items-center gap-2.5 no-underline ${className}`}>
       <img
         src={LOGO_SRC}
-        alt="Lucky Roo"
+        alt="LuckyRoo"
         className={`${s.img} object-contain flex-shrink-0`}
       />
       <div className="flex flex-col leading-none">
         <span className={`${s.text} font-extrabold tracking-tight text-white whitespace-nowrap`}>
-          Lucky Roo.
+          LuckyRoo.
         </span>
       </div>
-    </Link>
+    </a>
   );
 }

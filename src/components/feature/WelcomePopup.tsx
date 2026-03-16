@@ -10,13 +10,13 @@ const CARDS = [
   {
     key: 'free-pokies',
     label: 'FREE POKIES',
-    value: '1000+ GAMES',
+    value: '1330+ GAMES',
     iconSrc: '/popup-icons/free-pokies.png',
   },
   {
     key: 'online-casinos',
     label: 'ONLINE CASINOS',
-    value: '500+ BRANDS',
+    value: '550+ BRANDS',
     iconSrc: '/popup-icons/online-casinos.png',
   },
   {
@@ -28,7 +28,7 @@ const CARDS = [
   {
     key: 'providers',
     label: 'PROVIDERS',
-    value: '100+ BRANDS',
+    value: '150+ BRANDS',
     iconSrc: '/popup-icons/providers.png',
   },
 ] as const;

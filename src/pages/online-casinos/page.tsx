@@ -11,15 +11,15 @@ const casinos = [
   { id: 2, name: 'Kingbet9', slug: 'kingbet9', rating: 9.71, pros: ['Crypto-friendly', 'Fast withdrawals'], bonus: ['Daily Welcome Bonus', 'Weekly Rebates'], games: ['Bingo', 'Blackjack', 'Jackpot Games', 'Baccarat'] },
   { id: 3, name: 'Bigpay77', slug: 'bigpay77', rating: 9.83, pros: ['Trusted operator', 'No withdrawal limits'], bonus: ['Welcome Bonus', 'Daily Slot Bonus'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
   { id: 4, name: 'Me99', slug: 'me99', rating: 9.53, pros: ['Fiat and crypto', 'Live dealer'], bonus: ['Rebate Bonus 5%', 'Slot Welcome Bonus 50%', 'Every Deposit Random Bonus', 'Daily Easy Step Free 100'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
-  { id: 5, name: 'Rolex9', slug: 'rolex9', rating: 9.05, pros: ['Premium experience', 'Wide game range'], bonus: ['Daily Rebate', 'Special Bonus'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Video Poker'] },
+  { id: 5, name: 'Rolex9', slug: 'rolex9', rating: 9.55, pros: ['Premium experience', 'Wide game range'], bonus: ['Daily Rebate', 'Special Bonus'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Video Poker'] },
   { id: 6, name: 'Gucci9', slug: 'gucci9', rating: 9.56, pros: ['Licensed', 'Multiple payment options'], bonus: ['Weekly Commission 5%', 'Daily Easy Step Free 100', 'Every Deposit Random Bonus', 'Slot Welcome Bonus 50%'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
-  { id: 7, name: 'PKM9', slug: 'pkm9', rating: 9.39, pros: ['Popular brands', 'Mobile-friendly'], bonus: ['Slot Welcome Bonus 50%', 'Every Deposit Random Bonus', 'Daily Easy Step Free Credit 100', 'Daily Slot Bonus 80%'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
+  { id: 7, name: 'PKM9', slug: 'pkm9', rating: 9.69, pros: ['Popular brands', 'Mobile-friendly'], bonus: ['Slot Welcome Bonus 50%', 'Every Deposit Random Bonus', 'Daily Easy Step Free Credit 100', 'Daily Slot Bonus 80%'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
   { id: 8, name: 'MrBean9', slug: 'mrbean9', rating: 9.03, pros: ['Fun theme', 'Quick payouts'], bonus: ['Daily Easy Step Bonus AUD 100', 'Monday Special Slot Bonus 60%', 'Every Deposit Random Bonus', 'Daily Slot First Deposit 30%'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
   { id: 9, name: 'Micky9', slug: 'micky9', rating: 9.53, pros: ['Licensed (CGA)', 'Australian banks'], bonus: ['Weekly Rebate 6%', 'Weekly Commission 5%', '365 Random Daily Free', 'Free Credit 103.33'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
-  { id: 10, name: 'Winnie777', slug: 'winnie777', rating: 9.73, pros: ['Generous bonuses', '24/7 support'], bonus: ['Weekly Rebate 7%', 'Every Deposit Random Bonus', 'Free Credit 103.33', '365 Random Daily Free'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
-  { id: 11, name: 'Bybid9', slug: 'bybid9', rating: 9.08, pros: ['No withdrawal limits', 'Responsible gaming'], bonus: ['Daily Rebate', 'Weekly Comms'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
+  { id: 10, name: 'Winnie777', slug: 'winnie777', rating: 9.23, pros: ['Generous bonuses', '24/7 support'], bonus: ['Weekly Rebate 7%', 'Every Deposit Random Bonus', 'Free Credit 103.33', '365 Random Daily Free'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
+  { id: 11, name: 'Bybid9', slug: 'bybid9', rating: 9.78, pros: ['No withdrawal limits', 'Responsible gaming'], bonus: ['Daily Rebate', 'Weekly Comms'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
   { id: 12, name: 'Queen13', slug: 'queen13', rating: 9.28, pros: ['Premium design', 'Fast support'], bonus: ['New Member Free AUD 113', 'TPA Telegram Task Free AUD 35', 'Weekly Rebate Bonus 6%', 'Slot Welcome Bonus 50%'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
-  { id: 13, name: 'Ace96au', slug: 'ace96au', rating: 9.15, pros: ['Australian focus', 'Trusted brand'], bonus: ['Welcome Bonus', 'Daily Bonus'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
+  { id: 13, name: 'Ace96au', slug: 'ace96au', rating: 9.85, pros: ['Australian focus', 'Trusted brand'], bonus: ['Welcome Bonus', 'Daily Bonus'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
 ];
 
 const GAME_ICONS: Record<string, string> = {
@@ -47,8 +47,8 @@ export default function OnlineCasinosPage() {
 
   useEffect(() => {
     setPageMeta(
-      'Australia Online Casinos | Best Pokies & Ewallet Casinos – Lucky Roo',
-      'Compare the best online casinos for Australian players. Honest reviews, pokies, ewallet options, withdrawal limits & Trust Score by Lucky Roo. 18+.'
+      'Australia Online Casinos | Best Pokies & Ewallet Casinos – LuckyRoo',
+      'Compare the best online casinos for Australian players. Honest reviews, pokies, ewallet options, withdrawal limits & Trust Score by LuckyRoo. 18+.'
     );
   }, []);
 
@@ -85,7 +85,7 @@ export default function OnlineCasinosPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[250px] bg-gradient-to-b from-[#1a6fff]/20 to-transparent rounded-full blur-3xl"></div>
         </div>
         <div className="relative z-10">
-          <p className="text-[#0ea5e9] text-sm font-semibold tracking-widest mb-3 uppercase">Browse & Compare</p>
+          <p className="text-[#ff1d1d] text-sm font-semibold tracking-widest mb-3 uppercase">Browse & Compare</p>
           <h1 className="text-[#081a43] text-3xl md:text-4xl font-extrabold drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">Top-Rated Online</h1>
           <h2 className="text-3xl md:text-4xl font-extrabold mt-1 text-[#0f3c96] drop-shadow-[0_2px_8px_rgba(255,255,255,0.75)]">
             Ewallet Casinos in 2026
@@ -120,6 +120,7 @@ export default function OnlineCasinosPage() {
             const review = getCasinoBySlug(casino.slug);
             const pros = review?.pros?.slice(0, 2) ?? casino.pros;
             const bonusTitles = review?.bonuses?.slice(0, 2).map((b) => b.title) ?? casino.bonus;
+            const playNowUrl = review?.playNowUrl ?? `https://${casino.slug}.com`;
             return (
               <div
                 key={casino.id}
@@ -153,7 +154,7 @@ export default function OnlineCasinosPage() {
                       READ REVIEW
                     </Link>
                     <a
-                      href={casino.playNowUrl}
+                      href={playNowUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#06b6d4] text-white py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity cursor-pointer whitespace-nowrap text-center shadow-[0_10px_24px_rgba(6,182,212,0.4)]"
