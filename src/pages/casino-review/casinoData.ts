@@ -53,8 +53,8 @@ export interface CasinoData {
 
 const SHARED = {
   banner: '/welcome-banner.png',
-  trustBadges: ['Licensed & Regulated', 'SSL Encrypted', 'Fair Gaming', 'Responsible Gambling'],
-  license: 'Curacao eGaming License',
+  trustBadges: ['Licensed & Regulated', '18+ Only', 'SSL Encrypted', 'Fair Gaming', 'Responsible Gambling'],
+  license: 'Curacao Gaming Authority (CGA)',
   trustScoreBy: 'Trust Score by LuckyRoo',
   trustLabel: 'Trusted by Curacao Gaming Authority (CGA)',
   keyFacts: {
