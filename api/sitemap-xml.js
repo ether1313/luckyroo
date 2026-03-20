@@ -6,7 +6,7 @@
 const SITE_URL = 'https://www.luckyroo.win';
 const SLUGS = [
   'ipay9', 'kingbet9', 'bigpay77', 'me99', 'rolex9', 'gucci9', 'pkm9',
-  'mrbean9', 'micky9', 'winnie777', 'bybid9', 'queen13', 'ace96au',
+  'mrbean9', 'micky9', 'winnie777', 'bybid9', 'queen13', 'ace96au', 'mrboom9',
 ];
 
 function escapeXml(s) {

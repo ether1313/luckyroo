@@ -20,6 +20,7 @@ const casinos = [
   { id: 11, name: 'Bybid9', slug: 'bybid9', rating: 9.82, pros: ['No withdrawal limits', 'Responsible gaming'], bonus: ['Daily Rebate', 'Weekly Comms'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
   { id: 12, name: 'Queen13', slug: 'queen13', rating: 9.69, pros: ['Premium design', 'Fast support'], bonus: ['New Member Free AUD 113', 'TPA Telegram Task Free AUD 35', 'Weekly Rebate Bonus 6%', 'Slot Welcome Bonus 50%'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
   { id: 13, name: 'Ace96au', slug: 'ace96au', rating: 9.85, pros: ['Australian focus', 'Trusted brand'], bonus: ['Welcome Bonus', 'Daily Bonus'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
+  { id: 14, name: 'MrBoom9', slug: 'mrboom9', rating: 9.84, pros: ['New launch', 'Extraordinary Bonus'], bonus: ['Slot Welcome Bonus 50%', 'Free Credit 99.99', 'Weekly Rebate Bonus 7%', 'Deposit Progressive AUD 61–99'], games: ['Bingo', 'Blackjack', 'Baccarat', 'Jackpot Games'] },
 ];
 
 const GAME_ICONS: Record<string, string> = {
@@ -37,7 +38,7 @@ type Tab = 'ALL' | 'RECOMMENDED' | 'LATEST';
 const ITEMS_PER_PAGE = 9;
 
 const RECOMMENDED_SLUGS = ['ipay9', 'kingbet9', 'bigpay77', 'me99', 'rolex9', 'gucci9', 'bybid9'];
-const LATEST_SLUGS = ['ace96au'];
+const LATEST_SLUGS = ['ace96au', 'mrboom9'];
 
 export default function OnlineCasinosPage() {
   const [activeTab, setActiveTab] = useState<Tab>('ALL');

@@ -6,7 +6,6 @@ const HomePage = lazy(() => import('../pages/home/page'));
 const OnlineCasinosPage = lazy(() => import('../pages/online-casinos/page'));
 const BonusesPage = lazy(() => import('../pages/bonuses/page'));
 const CasinoReviewPage = lazy(() => import('../pages/casino-review/page'));
-const NotFound = lazy(() => import('../pages/NotFound'));
 
 function RedirectCasinoReviewsToCasino() {
   const { slug } = useParams<{ slug: string }>();
@@ -27,7 +26,7 @@ const routes: RouteObject[] = [
   { path: '/bonuses', element: <Navigate to="/australia-casino-bonuses" replace /> },
   { path: '/casino-reviews/:slug/bonuses', element: <RedirectCasinoReviewsBonusesToCasino /> },
   { path: '/casino-reviews/:slug', element: <RedirectCasinoReviewsToCasino /> },
-  { path: '*', element: <NotFound /> },
+  { path: '*', element: <Navigate to="/" replace /> },
 ];
 
 export default routes;

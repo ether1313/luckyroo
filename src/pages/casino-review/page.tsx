@@ -1,4 +1,4 @@
-import { useParams, useSearchParams, Link } from 'react-router-dom';
+import { useParams, useSearchParams, Link, Navigate } from 'react-router-dom';
 import { useState, useCallback, useEffect } from 'react';
 import { getCasinoBySlug } from './casinoData';
 import Footer from '../../components/feature/Footer';
@@ -54,14 +54,7 @@ export default function CasinoReview() {
   }, [casino?.slug]);
 
   if (!casino) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-[#0f172a] mb-4">Casino Not Found</h1>
-          <p className="text-gray-600">The casino you&apos;re looking for doesn&apos;t exist.</p>
-        </div>
-      </div>
-    );
+    return <Navigate to="/" replace />;
   }
 
   const games = casino.games;

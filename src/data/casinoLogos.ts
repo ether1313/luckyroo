@@ -4,7 +4,7 @@ const DEFAULT_EXT = '.png';
 
 export const CASINO_LOGO_KEYS = [
   'ipay9', 'kingbet9', 'bigpay77', 'me99', 'rolex9', 'gucci9', 'pkm9',
-  'mrbean9', 'micky9', 'winnie777', 'bybid9', 'queen13', 'ace96au',
+  'mrbean9', 'micky9', 'winnie777', 'bybid9', 'queen13', 'ace96au', 'mrboom9',
 ] as const;
 
 export type CasinoLogoKey = (typeof CASINO_LOGO_KEYS)[number];
@@ -41,6 +41,7 @@ export const casinoDisplayName: Record<string, string> = {
   bybid9: 'Bybid9',
   queen13: 'Queen13',
   ace96au: 'Ace96au',
+  mrboom9: 'MrBoom9',
 };
 
 /** 按品牌显示名称或 slug 映射到 logo 文件名 */
@@ -58,6 +59,8 @@ export const casinoLogoKey: Record<string, string> = {
   'Bybid9': 'bybid9',
   'Queen13': 'queen13',
   'Ace96au': 'ace96au',
+  'MrBoom9': 'mrboom9',
+  'MRBOOM9': 'mrboom9',
   // slugs
   ipay9: 'ipay9',
   kingbet9: 'kingbet9',
@@ -72,6 +75,7 @@ export const casinoLogoKey: Record<string, string> = {
   bybid9: 'bybid9',
   queen13: 'queen13',
   ace96au: 'ace96au',
+  mrboom9: 'mrboom9',
 };
 
 export function getLogoUrlByName(casinoName: string): string {
